@@ -42,6 +42,7 @@ This part is defined in [the spec](https://www.w3.org/TR/css-values-4/#trig-infi
   ```
 The all animations' animation-duration will be 1s.
 
+MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/sin
 
 ## cos
   ```CSS
@@ -53,6 +54,8 @@ The all animations' animation-duration will be 1s.
   ```
 The width will be 0px.
 
+MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/cos
+
 ## tan
   ```CSS
   div {
@@ -63,6 +66,8 @@ The width will be 0px.
   ```
 
 The width will be approximately 0.57735026919px.
+
+MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/tan
 
   ```CSS
   div {
@@ -81,6 +86,8 @@ The width will be approximately 0.57735026919px.
   ```
 The parameter of rotate() will be 90deg.
 
+MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/asin
+
 
   ```CSS
   div {
@@ -97,6 +104,8 @@ The parameter of rotate() will be 'NaN'.
   ```
 The parameter of rotate() will be 0deg.
 
+MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/acos
+
 ## atan
   ```CSS
   div {
@@ -104,6 +113,8 @@ The parameter of rotate() will be 0deg.
   }
   ```
 The parameter of rotate() will be 45deg.
+
+MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/atan
 
   ```CSS
   div {
@@ -120,12 +131,20 @@ The parameter of rotate() will be 90deg.
   ```
 The parameter of rotate() will be 45deg.
 
+MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/atan2
+
   ```CSS
   div {
       transform: rotate(atan2(-infinity, -infinity));
   }
   ```
 The parameter of rotate() will be -135deg.
+
+\<relative length> units are currently hard to resolve and discussed on [CSSWG](https://github.com/w3c/csswg-drafts/issues/8169).
+We ignore the units for now, so that we can at least support the case where both operands have the same unit.
+Due to the webkit, gecko resolving <relative length> fallback into DoubleValue, chromium chooses the same logic.
+FYR: https://crbug.com/1392594
+
 # See Also
 
 Issue: [1190444](http://crbug.com/1190444)
