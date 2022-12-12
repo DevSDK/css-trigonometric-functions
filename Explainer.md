@@ -140,9 +140,12 @@ MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/atan2
   ```
 The parameter of rotate() will be -135deg.
 
-\<relative length> units are currently hard to resolve and discussed on [CSSWG](https://github.com/w3c/csswg-drafts/issues/8169).
+\<relative length> (e.g., `atan2(1vw, 1wh)`)units are currently hard to resolve and discussed on [CSSWG](https://github.com/w3c/csswg-drafts/issues/8169).
+
 We ignore the units for now, so that we can at least support the case where both operands have the same unit.
+
 Due to the webkit, gecko resolving <relative length> fallback into DoubleValue, chromium chooses the same logic.
+
 FYR: https://crbug.com/1392594
 
 # See Also
